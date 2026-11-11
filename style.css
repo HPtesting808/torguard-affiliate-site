@@ -1,0 +1,86 @@
+
+:root {
+    --primary: #2c3e50;
+    --accent: #e67e22;
+    --text: #333;
+    --bg: #f4f7f6;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--bg);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+header {
+    text-align: center;
+    padding: 40px 0;
+    background: var(--primary);
+    color: white;
+}
+
+h1, h2, h3 { color: var(--primary); }
+header h1 { color: white; margin: 0; }
+
+.cta-box {
+    background: #fff3e0;
+    border: 2px solid var(--accent);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 30px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+}
+
+.comparison-table th, .comparison-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.comparison-table th { background-color: #eee; }
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li::before {
+    content: '✅';
+    margin-right: 10px;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8em;
+    color: #777;
+    margin-top: 40px;
+}
