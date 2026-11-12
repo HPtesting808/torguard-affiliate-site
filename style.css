@@ -134,12 +134,9 @@ nav .container {
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-.review-card {
-    text-align: left;
-}
-
+.review-card { text-align: left; }
 .stars { color: var(--accent-gold); margin-bottom: 12px; }
-.review-text { font-size: 1rem; margin-bottom: 16px; color: var(--text-main); }
+.review-text { font-size: 1rem; margin-bottom: 16px; color: var(--text-main); font-style: italic; }
 .review-user { font-weight: 700; color: var(--text-dim); font-size: 0.9rem; }
 
 .benchmark-container {
@@ -155,8 +152,8 @@ nav .container {
 .benchmark-label { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; }
 .bar-wrapper { height: 8px; background: var(--glass); border-radius: 4px; overflow: hidden; }
 .bar-fill { height: 100%; border-radius: 4px; }
-.bar-torguard { background: var(--accent-cyan); width: 95%; }
-.bar-competitor { background: var(--text-dim); width: 60%; }
+.bar-torguard { background: linear-gradient(to right, var(--accent-purple), var(--accent-cyan)); }
+.bar-competitor { background: var(--text-dim); }
 
 .comparison-table { width: 100%; border-collapse: collapse; }
 .comparison-table th, .comparison-table td {
@@ -171,4 +168,5 @@ footer { padding: 60px 0; text-align: center; border-top: 1px solid var(--border
 
 @media (max-width: 768px) {
     .hero h1 { font-size: 2.5rem; }
+    .comparison-table { display: block; overflow-x: auto; }
 }
