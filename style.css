@@ -28,17 +28,14 @@ body {
     overflow-x: hidden;
 }
 
-/* Smooth Scroll */
 html { scroll-behavior: smooth; }
 
-/* Glassmorphism Layout */
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 24px;
 }
 
-/* Navigation */
 nav {
     position: sticky;
     top: 0;
@@ -64,7 +61,6 @@ nav .container {
     -webkit-text-fill-color: transparent;
 }
 
-/* Hero Section */
 .hero {
     padding: 120px 0 80px;
     text-align: center;
@@ -89,7 +85,6 @@ nav .container {
     margin: 0 auto 40px;
 }
 
-/* Buttons */
 .cta-button {
     display: inline-block;
     padding: 18px 40px;
@@ -126,8 +121,7 @@ nav .container {
     border-color: var(--neon-cyan);
 }
 
-/* Feature Grid */
-.features {
+.features, .reviews, .benchmarks, .comparison {
     padding: 100px 0;
 }
 
@@ -160,28 +154,78 @@ nav .container {
     box-shadow: 0 20px 40px rgba(188, 19, 254, 0.15);
 }
 
-.card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.05), transparent);
-    transform: translateX(-100%);
-    transition: 0.6s;
+/* --- REVIEWS SECTION --- */
+.review-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.card:hover::before {
-    transform: translateX(100%);
-}
-
-.card h3 {
+.stars {
+    color: var(--gold);
     font-size: 1.5rem;
     margin-bottom: 16px;
+}
+
+.review-text {
+    font-style: italic;
+    color: var(--text-main);
+    margin-bottom: 20px;
+}
+
+.review-user {
+    font-weight: 700;
     color: var(--neon-cyan);
 }
 
-/* Comparison Section */
+/* --- BENCHMARKS SECTION --- */
+.benchmark-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid var(--border);
+}
+
+.benchmark-row {
+    margin-bottom: 32px;
+}
+
+.benchmark-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.bar-wrapper {
+    height: 12px;
+    background: var(--glass);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bar-fill {
+    height: 100%;
+    border-radius: 6px;
+    transition: width 1.5s ease-out;
+}
+
+.bar-torguard {
+    background: linear-gradient(to right, var(--neon-purple), var(--neon-cyan));
+    width: 98%;
+}
+
+.bar-competitor {
+    background: var(--text-dim);
+    width: 65%;
+}
+
+/* --- COMPARISON SECTION --- */
 .comparison {
-    padding: 100px 0;
     background: rgba(0,0,0,0.3);
 }
 
@@ -214,7 +258,6 @@ nav .container {
     font-weight: 800;
 }
 
-/* Footer */
 footer {
     padding: 60px 0;
     text-align: center;
@@ -223,7 +266,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Animations */
 @keyframes float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
